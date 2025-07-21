@@ -1,4 +1,4 @@
-# Employ-Salary-Prediction for EDUNETFOUNDATION
+# Employ-Salary-Prediction for EDUNET FOUNDATION
 Employee Salary Prediction
 This repository contains a machine learning project focused on predicting employee salaries. The predictions are based on various features such as job type, degree, major, industry, years of experience, and distance from a metropolis.
 
