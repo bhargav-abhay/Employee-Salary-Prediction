@@ -2,7 +2,7 @@
 Employee Salary Prediction
 This repository contains a machine learning project focused on predicting employee salaries. The predictions are based on various features such as job type, degree, major, industry, years of experience, and distance from a metropolis.
 
-Table of Contents
+ # Table of Contents
 Problem Statement
 
 Solution Approach
@@ -21,15 +21,15 @@ Future Work
 
 Usage/Instructions
 
-License
 
-Problem Statement
+
+# Problem Statement
 The primary goal of this project is to develop a robust machine learning model that can accurately predict whether an employee's annual income is greater than $50K (>50K) or less than or equal to $50K (<=50K), given a set of relevant attributes.
 
-Solution Approach
+# Solution Approach
 The project utilizes various machine learning techniques for binary classification. The dataset used is adult 3.csv, which initially includes a large number of samples. The current model training has been performed on a processed version of this dataset.
 
-Features
+# Features
 The following features were used as input for the salary classification model:
 
 age: Age of the individual.
@@ -58,7 +58,7 @@ native-country: Country of origin.
 
 The target variable is income (categorized as <=50K or >50K).
 
-Data Preprocessing
+# Data Preprocessing
 The following steps were performed to prepare the data for model training:
 
 Missing Value Handling:
@@ -75,7 +75,7 @@ Rows where education was '5th-6th', '1st-4th', or 'Preschool' were removed.
 
 The education and relationship columns were dropped, likely due to redundancy or low predictive power after considering educational-num and marital-status.
 
-Outlier Treatment:
+# Outlier Treatment:
 
 Outliers in the age column were handled by filtering the data to include ages between 17 and 75, inclusive. Box plots were used to visualize the age distribution before and after filtering.
 
@@ -85,16 +85,16 @@ Categorical features (workclass, marital-status, occupation, race, gender, nativ
 
 For the Streamlit app, OneHotEncoder was also used for education, workclass, occupation, and gender along with StandardScaler for numerical features.
 
-Feature Scaling:
+# Feature Scaling:
 
 Numerical features were scaled to a range between 0 and 1 using MinMaxScaler. This helps in normalizing the input features for better model performance. StandardScaler was also used in the final pipeline for robust evaluation and deployment.
 
-Model Building
+# Model Building
 The dataset was split into training and testing sets (80% training, 20% testing) with stratification to maintain class proportions. Several machine learning classification models were trained and evaluated:
 
 K-Nearest Neighbors (KNN)
 
-Logistic Regression
+# Logistic Regression
 
 Multilayer Perceptron (MLPClassifier)
 
@@ -104,7 +104,7 @@ Support Vector Machine (SVM)
 
 Gradient Boosting Classifier
 
-Model Evaluation
+# Model Evaluation
 Models were evaluated based on accuracy_score and a detailed classification_report (including precision, recall, and F1-score) on the test set.
 
 Here's a summary of the model accuracies observed:
@@ -119,10 +119,10 @@ Gradient Boosting	0.8707
 Export to Sheets
 The Gradient Boosting Classifier demonstrated the highest accuracy of 0.8707, making it the best-performing model for this classification task.
 
-Results and Conclusion
+# Results and Conclusion
 The Gradient Boosting model achieved robust performance in classifying employee incomes. The detailed classification report provides insights into its precision and recall for both income classes (<=50K and >50K).
 
-Future Work
+# Future Work
 Fine-tune the hyperparameters of the best-performing model (Gradient Boosting) further using more advanced techniques (e.g., GridSearchCV with a wider range of parameters).
 
 Explore other advanced ensemble methods or deep learning architectures.
@@ -134,7 +134,7 @@ Investigate and mitigate potential biases in the dataset, especially regarding s
 Usage/Instructions
 This project can be used to predict the income class of new employees based on their attributes.
 
-Clone the repository:
+
 
 Bash
 
@@ -153,7 +153,7 @@ pip install pandas numpy matplotlib scikit-learn streamlit joblib
 Place the dataset:
 Ensure your dataset (adult 3.csv) is located at C:\Users\ABHAY TRIPATHI\OneDrive\Desktop\ibm project\adult 3.csv as referenced in the code, or update the path in the script.
 
-Run the Jupyter Notebook:
+# Run the Jupyter Notebook:
 Execute the cells in your emp.ipynb notebook to preprocess data, train models, and save artifacts (best_model.pkl, encoder.pkl, scaler.pkl).
 
 Run the Streamlit Application:
